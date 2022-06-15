@@ -25,7 +25,7 @@ export function render({ data, children, context }) {
         }
         </script>
 
-        <script>${getHydrationScriptContent(context)}</script>
+        <script type="module">${getHydrationScriptContent(context)}</script>
         <script type="module" src="/output.manifest.mjs"></script>
         <script type="module" src="/app/entry.client.mjs"></script>
       </body>

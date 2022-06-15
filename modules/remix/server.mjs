@@ -1,12 +1,6 @@
 import { createMemoryRouter } from "@remix-run/router";
 import { findRoute } from "./utils.mjs";
 
-export function json(val) {
-  return new Response(JSON.stringify(val), {
-    headers: { "Content-Type": "application/json" },
-  });
-}
-
 export function createHandler({ routes, entry }) {
   return async request => {
     let url = new URL(request.url);
